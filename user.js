@@ -1,5 +1,5 @@
 
-const backendURL = "http://localhost:9000"
+const backendURL = "https://tarot-daily-backend.herokuapp.com"
 const $welcome = document.querySelector(".user-greeting")
 const $horoscope = document.querySelector(".horoscope")
 const $displayReadings = document.querySelector(".display-readings")
@@ -161,7 +161,7 @@ function logoutAction(){
     $logoutButton.addEventListener('click', (_) => {
         event.preventDefault()
         localStorage.removeItem('token')
-        location.replace('/index.html')
+        location.replace('https://tarot-daily-reading.web.app')
     })
 }
 
@@ -201,7 +201,7 @@ function confirmDelete(){
         })
             .then(() => {
                 localStorage.removeItem('token')
-                location.replace('/')
+                location.replace('https://tarot-daily-reading.web.app')
             })
     })
     $dontDeleteButton.addEventListener('click', (_) => {

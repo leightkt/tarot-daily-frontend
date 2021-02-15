@@ -1,5 +1,5 @@
 console.log("%cHey you beautiful genderfull unicorn!", "color: magenta")
-const backendURL = "http://localhost:9000"
+const backendURL = "https://tarot-daily-backend.herokuapp.com"
 const $loginForm = document.querySelector(".login-form")
 const $errors = document.querySelector(".errors")
 const $signUpButton = document.querySelector(".sign-up")
@@ -41,7 +41,7 @@ function login(user_name, password){
                 const token = data.token
                 localStorage.setItem('token', token)
                 $loginForm.reset()
-                window.location.replace(`user.html?user_id=${data.user_id}`)
+                window.location.replace(`https://tarot-daily-reading.web.app/user.html?user_id=${data.user_id}`)
             }
         })
 }

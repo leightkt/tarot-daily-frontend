@@ -1,4 +1,4 @@
-const backendURL = "http://localhost:9000"
+const backendURL = "https://tarot-daily-backend.herokuapp.com"
 const $displayReadings = document.querySelector(".display-readings")
 const $question = document.querySelector(".question")
 const $date = document.querySelector(".date")
@@ -9,7 +9,7 @@ const readingId = queryParams.get('reading_id')
 const userID = queryParams.get('user_id')
 
 $backButton.addEventListener('click', (_) => {
-    window.location.replace(`/user.html?user_id=${userID}`)
+    window.location.replace(`https://tarot-daily-reading.web.app/user.html?user_id=${userID}`)
 })
 
 fetch(`${backendURL}/readings/${readingId}`, {
@@ -64,6 +64,6 @@ function addDeleteAction(reading){
                 "Content-Type": "application/json"
             }
         })
-        .then(window.location.replace(`/user.html?user_id=${userID}`))
+        .then(window.location.replace(`https://tarot-daily-reading.web.app/user.html?user_id=${userID}`))
     })
 }
