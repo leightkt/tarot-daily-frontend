@@ -1,0 +1,1 @@
+# tarot-daily-frontend
